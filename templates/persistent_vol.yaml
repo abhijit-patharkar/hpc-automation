@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: vastrtestnew2
+  labels:
+    name: vastrtestnew2
+spec:
+  capacity:
+    storage: 1024
+  storageClassName: standard
+  accessModes:
+  - ReadWriteMany
+  nfs:
+    path: /vastrtestnew2
+    server: 10.199.130.50

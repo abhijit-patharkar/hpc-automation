@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: fileserver_name
+  labels:
+    name: fileserver_name
+spec:
+  capacity:
+    storage: storage_limit
+  storageClassName: standard
+  accessModes:
+  - ReadWriteMany
+  nfs:
+    path: /fileserver_path
+    server: vasten_share_server_ip

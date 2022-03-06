@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: vastrtestnew2-claim
+spec:
+  accessModes:
+  - ReadWriteMany
+  storageClassName: "standard"
+  volumeName: vastrtestnew2
+  resources:
+    requests:
+      storage: 1024
+  selector:
+    matchLabels:
+      name: vastrtestnew2
